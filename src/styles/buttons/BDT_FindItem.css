@@ -1,0 +1,70 @@
+.BDT_FindItem {
+    position: relative;
+    color: var(--c_crWhite);
+}
+
+.BDT_FindItem .text {
+    padding-left: 2.4rem;
+    text-align: left;
+}
+
+.BDT_FindItem:hover {
+    color: var(--c_crYellow);
+}
+
+.BDT_FindItem.pressed {
+    color: var(--c_crYellow);
+}
+
+.BDT_FindItem.pressed:hover {
+    color: var(--c_crYellow);
+}
+
+.BDT_FindItem.pressed .text {
+    transform: translate(-0.1rem, 0.1rem);
+}
+
+.BDT_FindItem .decal {
+    position: absolute;
+    left: 0.2rem;
+    top: 0.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url('../../../img/A_LFGBtnNormal.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem:hover .decal {
+    background-image: url('../../../img/A_LFGBtnFlyby.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem.pressed .decal {
+    background-image: url('../../../img/A_LFGBtnPressed.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem.pressed:hover .decal {
+    background-image: url('../../../img/A_LFGBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem .background {
+    background-image: url('../../../img/A_BtnNormal.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem:hover .background {
+    background-image: url('../../../img/A_BtnFlyby.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem.pressed .background {
+    background-image: url('../../../img/A_BtnPressed.png');
+    background-size: 100%;
+}
+
+.BDT_FindItem.pressed:hover .background {
+    background-image: url('../../../img/A_BtnPressedFlyby.png');
+    background-size: 100%;
+}

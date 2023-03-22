@@ -1,0 +1,227 @@
+eq-inv-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+cursor-follower.picked-inv-item {
+    width: 4.0rem;
+    height: 4.0rem;
+    z-index: 99999;
+}
+
+eq-inv-slot > .container > .item-inside {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+eq-inv-slot > .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+eq-inv-slot > .container .background {
+    filter: brightness(0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+eq-inv-slot:hover > .container .background {
+    filter: brightness(1);
+}
+
+eq-inv-slot > .container .amount {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+    background-color: var(--c_crVDkGray);
+    text-align: center;
+    z-index: 2;
+}
+
+eq-inv-slot > .container .chargesEvolving {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+    color: var(--c_crGreen);
+    background-color: var(--c_crVDkGray);
+    text-align: center;
+    z-index: 2;
+}
+
+eq-inv-slot > .container .cooldown {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+}
+
+eq-inv-slot[item="InvSlot0"] > .container .background {
+    background-image: url('../../../img/A_InvCharm.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot1"] > .container .background {
+    background-image: url('../../../img/A_InvEar.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot2"] > .container .background {
+    background-image: url('../../../img/A_InvHead.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot3"] > .container .background {
+    background-image: url('../../../img/A_InvFace.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot4"] > .container .background {
+    background-image: url('../../../img/A_InvEar.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot5"] > .container .background {
+    background-image: url('../../../img/A_InvNeck.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot6"] > .container .background {
+    background-image: url('../../../img/A_InvShoulders.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot7"] > .container .background {
+    background-image: url('../../../img/A_InvArms.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot8"] > .container .background {
+    background-image: url('../../../img/A_InvAboutBody.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot9"] > .container .background {
+    background-image: url('../../../img/A_InvWrist.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot10"] > .container .background {
+    background-image: url('../../../img/A_InvWrist.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot11"] > .container .background {
+    background-image: url('../../../img/A_InvRange.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot12"] > .container .background {
+    background-image: url('../../../img/A_InvHands.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot13"] > .container .background {
+    background-image: url('../../../img/A_InvPrimary.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot14"] > .container .background {
+    background-image: url('../../../img/A_InvSecondary.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot15"] > .container .background {
+    background-image: url('../../../img/A_InvRing.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot16"] > .container .background {
+    background-image: url('../../../img/A_InvRing.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot17"] > .container .background {
+    background-image: url('../../../img/A_InvChest.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot18"] > .container .background {
+    background-image: url('../../../img/A_InvLegs.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot19"] > .container .background {
+    background-image: url('../../../img/A_InvFeet.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot20"] > .container .background {
+    background-image: url('../../../img/A_InvWaist.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot21"] > .container .background {
+    background-image: url('../../../img/A_InvPowerSource.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlot22"] > .container .background {
+    background-image: url('../../../img/A_InvAmmo.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="InvSlotKrono"] > .container .background,
+eq-inv-slot[item="InvSlot23"] > .container .background,
+eq-inv-slot[item="InvSlot24"] > .container .background,
+eq-inv-slot[item="InvSlot25"] > .container .background,
+eq-inv-slot[item="InvSlot26"] > .container .background,
+eq-inv-slot[item="InvSlot27"] > .container .background,
+eq-inv-slot[item="InvSlot28"] > .container .background,
+eq-inv-slot[item="InvSlot29"] > .container .background,
+eq-inv-slot[item="InvSlot30"] > .container .background,
+eq-inv-slot[item="InvSlot31"] > .container .background,
+eq-inv-slot[item="InvSlot32"] > .container .background,
+eq-inv-slot[item="InvSlot33"] > .container .background,
+eq-inv-slot[item="InvSlot34"] > .container .background {
+    background-image: url('../../../img/A_RecessedBox.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="MercInvSlot00"] > .container .background {
+    background-image: url('../../../img/A_InvEar.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="MercInvSlot01"] > .container .background {
+    background-image: url('../../../img/A_InvNeck.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="MercInvSlot02"] > .container .background {
+    background-image: url('../../../img/A_InvShoulders.png');
+    background-size: 100%;
+}
+
+eq-inv-slot[item="MercInvSlot03"] > .container .background {
+    background-image: url('../../../img/A_InvWaist.png');
+    background-size: 100%;
+}

@@ -1,0 +1,12 @@
+import './GroupWindow.html';
+import './InventoryWindow.html';
+import './InventoryWindow.css';
+import './InventoryWindowInv.html';
+import './InventoryWindowStats.html';
+import './InventoryWindowShrouds.html';
+import './InventoryWindowAltCurr.html';
+import './InventoryWindowMerc.html';
+import './MainChatWnd.html';
+import './StoryWnd.html';
+import './SelectorWindow.html';
+import './QuantityWnd.html';

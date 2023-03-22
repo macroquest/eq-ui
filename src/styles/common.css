@@ -1,0 +1,15 @@
+.t-a-right {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.t-a-left {
+    text-align: left;
+}
+
+.full-width {
+    display: flex;
+    flex: 1;
+}

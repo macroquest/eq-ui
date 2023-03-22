@@ -1,0 +1,157 @@
+/* NOTE: WDT_Rounded */
+.WDT_RoundedNoTitle {
+    --border-width: 0.5rem;
+    --z-index-borders: -1;
+    --z-index-panel: 1;
+
+    opacity: 1;
+    position: absolute;
+}
+
+.WDT_RoundedNoTitle > .container {
+    padding-top: var(--border-width);
+    padding-left: var(--border-width);
+    padding-right: var(--border-width);
+    padding-bottom: var(--border-width);
+}
+
+.WDT_RoundedNoTitle > .container > .window-body {
+    flex: 1 1;
+    overflow: hidden;
+}
+
+.WDT_RoundedNoTitle > .container > .window-body > .background-color > .background {
+    background-image: url('../../../img/wnd_bg_light_rock.png');
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0.8rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameBottomLeft.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: var(--border-width);
+    width: var(--border-width);
+    height: 0.4rem;
+    background-image: url('../../../img/A_RoundedFrameLeftBottom.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameBottomRight.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0.5rem;
+    width: var(--border-width);
+    height: 0.4rem;
+    background-image: url('../../../img/A_RoundedFrameRightBottom.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameTopLeft.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-left-top {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: var(--border-width);
+    height: 0.6rem;
+    background-image: url('../../../img/A_RoundedFrameLeftTop.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameTopRight.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-right-top {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: var(--border-width);
+    height: 0.6rem;
+    background-image: url('../../../img/A_RoundedFrameRightTop.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-top {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameTop.png');
+    background-size: 100%;
+    z-index: var(--z-index-borders);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-right {
+    position: absolute;
+    right: 0;
+    top: 1.1rem;
+    bottom: 0.9rem;
+    background-image: url('../../../img/A_RoundedFrameRight.png');
+    background-size: 100%;
+    width: var(--border-width);
+    z-index: var(--z-index-borders);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0.8rem;
+    right: 1rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_RoundedFrameBottom.png');
+    background-size: 100%;
+    z-index: var(--z-index-borders);
+}
+
+.WDT_RoundedNoTitle > .container > .window-frame-left {
+    position: absolute;
+    left: 0;
+    top: 1.1rem;
+    bottom: 0.9rem;
+    background-image: url('../../../img/A_RoundedFrameLeft.png');
+    background-size: 100%;
+    width: var(--border-width);
+    z-index: var(--z-index-borders);
+}

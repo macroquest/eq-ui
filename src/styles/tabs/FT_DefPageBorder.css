@@ -1,0 +1,140 @@
+/* NOTE: FT_DefPageBorder */
+.FT_DefPageBorder {
+    --border-width: 0.4rem;
+
+    opacity: 1; 
+}
+
+.FT_DefPageBorder > .container {
+    padding-top: var(--border-width);
+    padding-left: var(--border-width);
+    padding-right: var(--border-width);
+    padding-bottom: var(--border-width);
+    position: relative;
+}
+
+.FT_DefPageBorder > .container > .window-body {
+    flex: 1 1;
+    overflow: hidden;
+}
+
+.FT_DefPageBorder > .container > .window-frame-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_TabFrameBottomLeft.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: var(--border-width);
+    width: var(--border-width);
+    height: 0.8rem;
+    background-image: url('../../../img/A_TabFrameLeftBottom.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_TabFrameBottomRight.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: var(--border-width);
+    width: var(--border-width);
+    height: 0.8rem;
+    background-image: url('../../../img/A_TabFrameRightBottom.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_TabFrameTopLeft.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-left-top {
+    position: absolute;
+    left: 0;
+    top: var(--border-width);
+    width: var(--border-width);
+    height: 0.8rem;
+    background-image: url('../../../img/A_TabFrameLeftTop.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1.0rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_TabFrameTopRight.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-right-top {
+    position: absolute;
+    right: 0;
+    top: 0.4rem;
+    width: var(--border-width);
+    height: 0.8rem;
+    background-image: url('../../../img/A_TabFrameRightTop.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: var(--border-width);
+    height: var(--border-width);
+    width: 100%;
+    background-image: url('../../../img/A_TabFrameTop.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-right {
+    position: absolute;
+    right: 0;
+    top: 1.2rem;
+    bottom: 1.2rem;
+    background-image: url('../../../img/A_TabFrameRight.png');
+    background-size: 100%;
+    width: var(--border-width);
+}
+
+.FT_DefPageBorder > .container > .window-frame-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_TabFrameBottom.png');
+    background-size: 100%;
+}
+
+.FT_DefPageBorder > .container > .window-frame-left {
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    bottom: 1.2rem;
+    background-image: url('../../../img/A_TabFrameLeft.png');
+    background-size: 100%;
+    width: var(--border-width);
+}

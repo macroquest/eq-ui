@@ -1,0 +1,53 @@
+eq-list {
+    flex: 1 1;
+}
+
+eq-list eq-box .background {
+    background-image: none !important;
+}
+
+eq-list eq-box {
+    flex: 1 1
+}
+
+.eq-list-container {
+    flex: 1 1;
+}
+
+.eq-list-row {
+    display: flex;
+    color: var(--c_crWhite);
+}
+
+.eq-list-content  > .col  {
+    /* compensation for divider */
+    margin-right: 0.6rem;
+}
+
+.eq-list-header {
+    margin-right: 1.2rem;
+    color: var(--c_crLtBlueCool);
+}
+
+.eq-list-row.selected {
+    background-color: var(--c_crDkGray);
+}
+
+.eq-list-header .eq-list-separator {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    cursor: ew-resize;
+}
+
+.eq-list-header .eq-list-separator .eq-list-separator-img {
+    background-image: url('../../../assets/images/Separator.png');
+    background-size: 100%;
+    width: 0.2rem;
+    height: 1.8rem;
+}
+
+.col-content .img {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    background-size: 100% 100% !important;
+}

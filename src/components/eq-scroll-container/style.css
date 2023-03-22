@@ -1,0 +1,242 @@
+eq-scroll-container {
+    display: flex;
+    flex: 1;
+    height: 100%;
+}
+
+eq-scroll-container > .container {
+    position: relative;
+    flex: 1 1;
+    padding-right: 1.2rem;
+}
+
+eq-scroll-container > .container.horizontal {
+    padding-right: 0;
+    padding-bottom: 1.2rem;
+}
+
+eq-scroll-container > .container > .content {
+    flex: 1 1;
+    overflow-y: scroll;
+}
+
+eq-scroll-container > .container.horizontal > .content {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+/* Vertical */
+eq-scroll-container > .container > .scrollbar {
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 1.2rem;
+    height: 100%;
+    flex-direction: column;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-up {
+    min-height: 1.0rem;
+    height: 2.2rem;
+    width: 100%;
+    background-image: url('../../../img/A_VSBUpNormal.png');
+    background-size: 100% 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-up.pressed {
+    background-image: url('../../../img/A_VSBUpPressed.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-up:hover {
+    background-image: url('../../../img/A_VSBUpFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-up.pressed:hover {
+    background-image: url('../../../img/A_VSBUpPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container[disabled] > .container > .scrollbar > .arrow-up,
+eq-scroll-container[disabled] > .container > .scrollbar > .arrow-up.pressed {
+    background-image: url('../../../img/A_VSBUpDisabled.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .track {
+    position: relative;
+    flex: 1;
+}
+
+/** 
+ * NOTE: hack to add filter only for track
+ * @see https://stackoverflow.com/questions/28975673/how-to-blurcss-div-without-blur-child-element
+ */
+eq-scroll-container > .container > .scrollbar > .track > .track-filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(0.5);
+    background-image: url('../../../assets/images/scrollbar_gutter.png');
+    z-index: 0;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-down {
+    min-height: 1.0rem;
+    height: 2.2rem;
+    width: 100%;
+    background-image: url('../../../img/A_VSBDownNormal.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-down.pressed {
+    background-image: url('../../../img/A_VSBDownPressed.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-down:hover {
+    background-image: url('../../../img/A_VSBDownFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .arrow-down.pressed:hover {
+    background-image: url('../../../img/A_VSBDownPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container[disabled] > .container > .scrollbar > .arrow-down,
+eq-scroll-container[disabled] > .container > .scrollbar > .arrow-down.pressed {
+    background-image: url('../../../img/A_VSBDownDisabled.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .track > .handle {
+    position: relative;
+    background-image: url('../../../img/A_VSBThumbMiddle.png');
+    background-size: 100%;
+    min-height: 1.0rem;
+    z-index: 1;
+}
+
+eq-scroll-container > .container > .scrollbar > .track > .handle .start {
+    position: absolute;
+    top: 0;
+    background-image: url('../../../img/A_VSBThumbTop.png');
+    background-size: 100%;
+    height: 0.4rem;
+    width: 100%;
+}
+
+eq-scroll-container > .container > .scrollbar > .track > .handle .end {
+    position: absolute;
+    bottom: 0;
+    background-image: url('../../../img/A_VSBThumbBottom.png');
+    background-size: 100%;
+    height: 0.4rem;
+    width: 100%;
+}
+
+/* Horizontal */
+
+eq-scroll-container > .container.horizontal > .scrollbar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1.2rem;
+    flex-direction: row;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-up {
+    height: 100%;
+    width: 2.2rem;
+    background-image: url('../../../img/A_HSBLeftNormal.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-up.pressed {
+    background-image: url('../../../img/A_HSBLeftPressed.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-up:hover {
+    background-image: url('../../../img/A_HSBLeftFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-up.pressed:hover {
+    background-image: url('../../../img/A_HSBLeftPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .track {
+    position: relative;
+    flex: 1;
+}
+
+/** 
+ * NOTE: hack to add filter only for track
+ * @see https://stackoverflow.com/questions/28975673/how-to-blurcss-div-without-blur-child-element
+ */
+eq-scroll-container > .container.horizontal > .scrollbar > .track > .track-filter {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: brightness(0.5);
+    background-image: url('../../../assets/images/scrollbar_Hgutter.png');
+    background-size: 100%;
+    z-index: 0;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-down {
+    height: 100%;
+    width: 2.2rem;
+    background-image: url('../../../img/A_HSBRightNormal.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-down.pressed {
+    background-image: url('../../../img/A_HSBRightPressed.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-down:hover {
+    background-image: url('../../../img/A_HSBRightFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .arrow-down.pressed:hover {
+    background-image: url('../../../img/A_HSBRightPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .track > .handle {
+    position: relative;
+    background-image: url('../../../img/A_HSBThumbMiddle.png');
+    background-size: 100%;
+    min-width: 1.0rem;
+    height: 1.2rem;
+    z-index: 1;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .track > .handle .start {
+    position: absolute;
+    left: 0;
+    background-image: url('../../../img/A_HSBThumbRight.png');
+    background-size: 100%;
+    height: 100%;
+    width: 0.4rem;
+}
+
+eq-scroll-container > .container.horizontal > .scrollbar > .track > .handle .end {
+    position: absolute;
+    right: 0;
+    background-image: url('../../../img/A_HSBThumbLeft.png');
+    background-size: 100%;
+    height: 100%;
+    width: 0.4rem;
+}

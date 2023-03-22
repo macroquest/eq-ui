@@ -1,0 +1,75 @@
+.progress-bar-container {
+    flex: 1;
+    height: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.progress-background {
+    flex: 1;
+    height: 1.1rem;
+    background-image: url('../../../img/A_GaugeBackground.png');
+    background-size: 100%;
+    position: relative;
+}
+
+.left-cap {
+    width: 0.4rem;
+    height: 1.1rem;
+    background-image: url('../../../img/A_GaugeEndCapLeft.png');
+    background-size: 100%;
+}
+
+.right-cap {
+    width: 0.4rem;
+    height: 1.1rem;
+    background-image: url('../../../img/A_GaugeEndCapRight.png');
+    background-size: 100%;
+}
+
+.progress-fill {
+    height: 100%;
+    background-size: 100%;
+}
+
+.progress-lines {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0.1rem;
+    left: 0;
+    background-image: url('../../../img/A_GaugeLines.png');
+    background-size: 100%;
+}
+
+.tint {
+    background-size: 100%;
+    width: 100%;
+    position: absolute;
+    top: 15%;
+}
+
+.middle-tint {
+    background-size: 100%;
+    width: 100%;
+}
+
+.middle-fill {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    height: 100%;
+}
+
+.alt-progress-fill {
+    position: absolute;
+    top:0;
+    height: 100%;
+}
+
+.alt-tint {
+    background-size: 100%;
+    width: 100%;
+    position: absolute;
+    bottom:20%;
+}

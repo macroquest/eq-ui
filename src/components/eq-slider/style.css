@@ -1,0 +1,49 @@
+eq-slider .container {
+    height: 2.0rem;
+    display: flex;
+    flex: 1 1;
+    position: relative;
+}
+
+eq-slider .track {
+    position: absolute;
+    left: 0.4rem;
+    top: 0;
+    right: 0.4rem;
+    height: 1.2rem;
+    background-size: 100%;
+}
+
+eq-slider .end-cap-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.4rem;
+    height: 1.2rem;
+    z-index: 1;
+    background-size: 100%;
+}
+
+eq-slider .end-cap-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0.4rem;
+    height: 1.2rem;
+    z-index: 1;
+    background-size: 100%;
+}
+
+eq-slider .thumb {
+    position: absolute;
+    top: 0;
+    width: 0.9rem;
+    height: 1.8rem;
+    z-index: 2;
+    background-size: 100%;
+}
+
+/* NOTE: this hack we use to avoid mouseup events on eq-buttons */
+body.ignore-events eq-button {
+    pointer-events: none;
+}

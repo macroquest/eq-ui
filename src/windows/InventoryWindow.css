@@ -1,0 +1,128 @@
+.inventory-tab-slots-row {
+    display: flex;
+    padding: 0 0.6rem;
+    justify-content: space-between;
+}
+
+.inventory-tab-slots-column {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.IW_CharacterView {
+    margin: 0.1rem;
+    width: 8.5rem; 
+    height: 16.8rem;
+}
+
+.inventory-tab-row.next-level {
+    margin-top: 0.4rem
+}
+
+.inventory-tab-slots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inventory-tab-empty-slot {
+    width: 4.2rem;
+    height: 4.2rem;
+}
+
+.inventory-tab-list,
+.stats-tab-list {
+    margin-bottom: 1.0rem;
+}
+
+.merc-tab-list {
+    margin-bottom: 1.6rem;
+
+}
+
+.inventory-tab-row, 
+.stats-tab-row,
+.merc-tab-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inventory-tab-label-content,
+.stats-tab-label-content,
+.merc-tab-label-content {
+    display: flex;
+}
+
+.stats-tab-body {
+    display: flex; 
+    flex: 1 1; 
+    flex-direction: row;
+    padding: 1.0rem 2.0rem 0.5rem
+}
+
+.merc-tab-body {
+    display: flex; 
+    flex: 1 1; 
+    flex-direction: row;
+    padding: 0.8rem 2.0rem 0.5rem
+}
+
+.merc-tab-column,
+.merc-tab-slots-column  {
+    flex: 1 1;
+}
+
+.stats-tab-column,
+.merc-tab-column {
+    flex-direction: column; 
+    flex: 1 1;
+    margin-left: 4.5rem;
+}
+
+.stats-tab-column {
+    width: 17.5rem;
+}
+
+.stats-tab-column:first-child,
+.merc-tab-column:first-child {
+    margin-left: 0;
+}
+
+.stats-tab-label-heading,
+.merc-tab-label-heading {
+    color: rgb(138, 163, 255)
+}
+
+.stats-tab-label-plus,
+.merc-tab-label-plus {
+    color: rgb(214, 178, 40)}
+
+.stats-tab-row,
+.merc-tab-row {
+    line-height: 1.6rem;
+}
+
+.merc-tab-slots-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.0rem;
+}
+
+.merc-tab-slots-row:last-child {
+    margin-bottom: 0;
+}
+
+.merc-tab-slots-column {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4.0rem;
+    padding-bottom: 8.0rem;
+}
+
+.merc-tab-merc-slot {
+    margin-left: 2.0rem
+}
+
+

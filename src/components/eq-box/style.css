@@ -1,0 +1,53 @@
+eq-box [slot="body"] {
+    display: flex;
+    flex: 1 1;
+}
+
+
+eq-box > .container {
+    flex: 1 1;
+}
+
+eq-box > .container > .window-body {
+    position: relative;
+}
+
+eq-box > .container > .window-body > .background-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+eq-box > .container > .window-body > .background-color > .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* NOTE: hide all */
+eq-box > .container > .titlebar,
+eq-box > .container > .window-frame-top-left,
+eq-box > .container > .window-frame-top,
+eq-box > .container > .window-frame-top-right,
+eq-box > .container > .window-frame-right-top,
+eq-box > .container > .window-frame-right,
+eq-box > .container > .window-frame-right-bottom,
+eq-box > .container > .window-frame-bottom-right,
+eq-box > .container > .window-frame-bottom,
+eq-box > .container > .window-frame-bottom-left,
+eq-box > .container > .window-frame-left-top,
+eq-box > .container > .window-frame-left,
+eq-box > .container > .window-frame-left-bottom
+{
+    display: none;
+}
+
+.d-block {
+    display: block !important;
+}

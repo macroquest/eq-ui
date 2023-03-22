@@ -1,0 +1,211 @@
+eq-screen {
+    cursor: auto;
+}
+
+eq-screen > .container > .titlebar {
+    display: none;
+}
+
+eq-screen > .container > .titlebar .titlebar-middle {
+    z-index: -1;
+}
+
+eq-screen > .container > .titlebar .titlebar-right {
+    position: relative;
+}
+
+eq-screen > .container > .titlebar .title {
+    position: absolute;
+    left: 50%;
+    color: var(--c_crGray);
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    font-weight: 100;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+eq-screen > .container > .window-body {
+    position: relative;
+}
+
+eq-screen > .container > .window-body > .background-color {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+eq-screen > .container > .window-body > .background-color > .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+eq-screen .titlebar-left .minimize {
+    display: none;
+    position: relative;
+    left: 0.8rem;
+    top: 0.2rem;
+    background-image: url('../../../img/A_MinimizeBtnNormal.png');
+    background-size: 100%;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: auto;
+    z-index: 2;
+}
+
+
+eq-screen .titlebar-right .close {
+    display: none;
+    position: absolute;
+    right: 0.8rem;
+    top: 0.1rem;
+    background-image: url('../../../img/A_CloseBtnNormal.png');
+    background-size: 100%;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: auto;
+    z-index: 2;
+}
+
+eq-screen .titlebar-right .qmark {
+    display: none;
+    position: absolute;
+    right: 2.2rem;
+    top: 0.1rem;
+    background-image: url('../../../img/A_QMarkBtnNormal.png');
+    background-size: 100%;
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: auto;
+    z-index: 2;
+}
+
+eq-screen .titlebar-left .minimize:hover {
+    background-image: url('../../../img/A_MinimizeBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .close:hover {
+    background-image: url('../../../img/A_CloseBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .qmark:hover {
+    background-image: url('../../../img/A_QmarkBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-left .minimize.pressed {
+    background-image: url('../../../img/A_MinimizeBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .close.pressed {
+    background-image: url('../../../img/A_CloseBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .qmark.pressed {
+    background-image: url('../../../img/A_QmarkBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-left .minimize.pressed:hover {
+    background-image: url('../../../img/A_MinimizeBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .close.pressed:hover {
+    background-image: url('../../../img/A_CloseBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen .titlebar-right .qmark.pressed:hover {
+    background-image: url('../../../img/A_QmarkBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-screen[draggable] > .container > .window-frame-bottom-left,
+eq-screen[draggable] > .container > .window-frame-left-bottom,
+eq-screen[draggable] > .container > .window-frame-bottom-right,
+eq-screen[draggable] > .container > .window-frame-right-bottom,
+eq-screen[draggable] > .container > .window-frame-top-left,
+eq-screen[draggable] > .container > .window-frame-left-top,
+eq-screen[draggable] > .container > .window-frame-right-top,
+eq-screen[draggable] > .container > .window-frame-top-right,
+eq-screen[draggable] > .container > .window-frame-top,
+eq-screen[draggable] > .container > .window-frame-right,
+eq-screen[draggable] > .container > .window-frame-bottom,
+eq-screen[draggable] > .container > .window-frame-left,
+eq-screen[draggable] > .container > .titlebar {
+    cursor: move;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-bottom-left {
+    cursor: sw-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-left-bottom {
+    cursor: sw-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-bottom-right {
+    cursor: se-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-right-bottom {
+    cursor: se-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-top-left {
+    cursor: nw-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-left-top {
+    cursor: nw-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-top-right {
+    cursor: ne-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-right-top {
+    cursor: ne-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-top {
+    cursor: n-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-right {
+    cursor: w-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-bottom {
+    cursor: s-resize;
+    z-index: 1;
+}
+
+eq-screen[sizable] > .container > .window-frame-left {
+    cursor: e-resize;
+    z-index: 1;
+}

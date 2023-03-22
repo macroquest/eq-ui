@@ -1,0 +1,392 @@
+eq-toggle-button {
+    height: 2.6rem;
+    width: 2.6rem;
+    border: none;
+    cursor: pointer;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+eq-toggle-button > .container {
+    width: 100%;
+    height: 100%;
+}
+
+eq-toggle-button .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+eq-toggle-button .text {
+    color: var(--c_crWhite);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+eq-toggle-button:hover .text {
+    color: var(--c_crYellow);
+}
+
+eq-toggle-button.SELW_ActionsToggleButton,
+eq-toggle-button.SELW_InventoryToggleButton,
+eq-toggle-button.SELW_OptionsToggleButton,
+eq-toggle-button.SELW_FriendsToggleButton,
+eq-toggle-button.SELW_CastSpellToggleButton,
+eq-toggle-button.SELW_HotboxToggleButton,
+eq-toggle-button.SELW_CombatSkillsToggleButton,
+eq-toggle-button.SELW_PetInfoToggleButton,
+eq-toggle-button.SELW_BuffToggleButton,
+eq-toggle-button.SELW_SDBuffToggleButton,
+eq-toggle-button.SELW_GuildToggleButton,
+eq-toggle-button.SELW_MapToggleButton,
+eq-toggle-button.SELW_StoryToggleButton,
+eq-toggle-button.SELW_JournalToggleButton {
+    margin-right: 0.4rem;
+}
+
+eq-toggle-button.SELW_ActionsToggleButton .background {
+    background-image: url('../../../img/A_ActionsBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_InventoryToggleButton .background {
+    background-image: url('../../../img/A_InventoryBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_OptionsToggleButton .background {
+    background-image: url('../../../img/A_OptionsBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_FriendsToggleButton .background {
+    background-image: url('../../../img/A_FriendsBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HotboxToggleButton .background {
+    background-image: url('../../../img/A_HotboxBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CastSpellToggleButton .background {
+    background-image: url('../../../img/A_CastSpellBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CombatSkillsToggleButton .background {
+    background-image: url('../../../img/A_CombatSkillBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_PetInfoToggleButton .background {
+    background-image: url('../../../img/A_PetInfoBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_GuildToggleButton .background {
+    background-image: url('../../../img/A_GuildBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_BuffToggleButton .background {
+    background-image: url('../../../img/A_BuffBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_SDBuffToggleButton .background {
+    background-image: url('../../../img/A_SongBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MapToggleButton .background {
+    background-image: url('../../../img/A_MapBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_StoryToggleButton .background {
+    background-image: url('../../../img/A_StoryBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_JournalToggleButton .background {
+    background-image: url('../../../img/A_JournalBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MailToggleButton .background {
+    background-image: url('../../../img/A_GotMailBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HelpToggleButton .background {
+    background-image: url('../../../img/A_HelpBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MercenariesToggleButton .background {
+    background-image: url('../../../img/A_MercenaryBtnNormal.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_ActionsToggleButton:hover .background {
+    background-image: url('../../../img/A_ActionsBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_InventoryToggleButton:hover .background {
+    background-image: url('../../../img/A_InventoryBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_OptionsToggleButton:hover .background {
+    background-image: url('../../../img/A_OptionsBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_FriendsToggleButton:hover .background {
+    background-image: url('../../../img/A_FriendsBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HotboxToggleButton:hover .background {
+    background-image: url('../../../img/A_HotboxBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CastSpellToggleButton:hover .background {
+    background-image: url('../../../img/A_CastSpellBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CombatSkillsToggleButton:hover .background {
+    background-image: url('../../../img/A_CombatSkillBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_PetInfoToggleButton:hover .background {
+    background-image: url('../../../img/A_PetInfoBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_BuffToggleButton:hover .background {
+    background-image: url('../../../img/A_BuffBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_StoryToggleButton:hover .background {
+    background-image: url('../../../img/A_StoryBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_JournalToggleButton:hover .background {
+    background-image: url('../../../img/A_JournalBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MailToggleButton:hover .background {
+    background-image: url('../../../img/A_GotMailBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HelpToggleButton:hover .background {
+    background-image: url('../../../img/A_HelpBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MercenariesToggleButton:hover .background {
+    background-image: url('../../../img/A_MercenaryBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_SDBuffToggleButton:hover .background {
+    background-image: url('../../../img/A_SongBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_GuildToggleButton:hover .background {
+    background-image: url('../../../img/A_GuildBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MapToggleButton:hover .background {
+    background-image: url('../../../img/A_MapBtnFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_ActionsToggleButton.checked .background {
+    background-image: url('../../../img/A_ActionsBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_InventoryToggleButton.checked .background {
+    background-image: url('../../../img/A_InventoryBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_OptionsToggleButton.checked .background {
+    background-image: url('../../../img/A_OptionsBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_FriendsToggleButton.checked .background {
+    background-image: url('../../../img/A_FriendsBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HotboxToggleButton.checked .background {
+    background-image: url('../../../img/A_HotboxBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CastSpellToggleButton.checked .background {
+    background-image: url('../../../img/A_CastSpellBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CombatSkillsToggleButton.checked .background {
+    background-image: url('../../../img/A_CombatSkillBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_PetInfoToggleButton.checked .background {
+    background-image: url('../../../img/A_PetInfoBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_BuffToggleButton.checked .background {
+    background-image: url('../../../img/A_BuffBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_SDBuffToggleButton.checked .background {
+    background-image: url('../../../img/A_SongBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_GuildToggleButton.checked .background {
+    background-image: url('../../../img/A_GuildBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MapToggleButton.checked .background {
+    background-image: url('../../../img/A_MapBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_StoryToggleButton.checked .background {
+    background-image: url('../../../img/A_StoryBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_JournalToggleButton.checked .background {
+    background-image: url('../../../img/A_JournalBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MailToggleButton.checked .background {
+    background-image: url('../../../img/A_GotMailBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HelpToggleButton.checked .background {
+    background-image: url('../../../img/A_HelpBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MercenariesToggleButton.checked .background {
+    background-image: url('../../../img/A_MercenaryBtnPressed.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_ActionsToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_ActionsBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_InventoryToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_InventoryBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_OptionsToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_OptionsBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_FriendsToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_FriendsBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HotboxToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_HotboxBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CastSpellToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_CastSpellBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_CombatSkillsToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_CombatSkillBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_PetInfoToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_PetInfoBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_BuffToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_BuffBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_SDBuffToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_SongBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_GuildToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_GuildBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MapToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_MapBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_StoryToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_StoryBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_JournalToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_JournalBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MailToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_GotMailBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_HelpToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_HelpBtnPressedFlyby.png');
+    background-size: 100%;
+}
+
+eq-toggle-button.SELW_MercenariesToggleButton.checked:hover .background {
+    background-image: url('../../../img/A_MercenaryBtnPressedFlyby.png');
+    background-size: 100%;
+}

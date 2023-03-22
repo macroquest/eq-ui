@@ -1,0 +1,53 @@
+.BDT_Normal {
+    color: var(--c_crWhite);
+    font-size: 1.3rem;
+}
+
+.BDT_Normal:hover {
+    color: var(--c_crYellow);
+}
+
+.BDT_Normal.pressed {
+    color: var(--c_crYellow);
+}
+
+.BDT_Normal.pressed:hover {
+    color: var(--c_crYellow);
+}
+
+.BDT_Normal.pressed .text {
+    transform: translate(-0.1rem, 0.1rem);
+}
+
+.BDT_Normal .decal {
+    visibility: hidden;
+}
+
+.BDT_Normal .background {
+    background-image: url('../../../img/A_BtnNormal.png');
+    background-size: 100%;
+}
+
+.BDT_Normal.disabled {
+    pointer-events: none;
+}
+
+.BDT_Normal.disabled .background {
+    background-image: url('../../../img/A_BtnDisabled.png');
+    background-size: 100%;
+}
+
+.BDT_Normal:hover .background {
+    background-image: url('../../../img/A_BtnFlyby.png');
+    background-size: 100%;
+}
+
+.BDT_Normal.pressed .background {
+    background-image: url('../../../img/A_BtnPressed.png');
+    background-size: 100%;
+}
+
+.BDT_Normal.pressed:hover .background {
+    background-image: url('../../../img/A_BtnPressedFlyby.png');
+    background-size: 100%;
+}

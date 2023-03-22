@@ -1,0 +1,78 @@
+/* NOTE: Color palette */
+@import url('./styles/colors.css');
+@import url('./styles/common.css');
+
+/* NOTE: Components */
+@import url('./components/eq-toggle-button/style.css');
+@import url('./components/eq-screen/style.css');
+@import url('./components/eq-checkbox/style.css');
+@import url('./components/eq-scroll-container/style.css');
+@import url('./components/eq-list/style.css');
+@import url('./components/eq-list-column/style.css');
+@import url('./components/eq-stml/style.css');
+@import url('./components/eq-tooltip/style.css');
+@import url('./components/eq-context-menu/style.css');
+@import url('./components/eq-button/style.css');
+@import url('./components/eq-separator/style.css');
+@import url('./components/eq-progress-bar/style.css');
+@import url('./components/eq-label/style.css');
+@import url('./components/eq-drop-down/style.css');
+@import url('./components/eq-tabs/style.css');
+@import url('./components/eq-box/style.css');
+@import url('./components/eq-image/style.css');
+@import url('./components/eq-inv-slot/style.css');
+@import url('./components/eq-vertical-layout/style.css');
+@import url('./components/eq-input/style.css');
+@import url('./components/eq-slider/style.css');
+
+/* NOTE: Styles for eq-screen component */
+@import url('./styles/screens/WDT_Rounded.css');
+@import url('./styles/screens/WDT_RoundedNoTitle.css');
+@import url('./styles/screens/WDT_Inner.css');
+
+/* NOTE: Styles for eq-tabs component */
+@import url('./styles/tabs/FT_DefPageBorder.css');
+@import url('./styles/tabs/FT_DefTabBorder.css');
+
+/* NOTE: Styles for eq-button component */
+@import url('./styles/buttons/BDT_Normal.css');
+@import url('./styles/buttons/BDT_FindItem.css');
+@import url('./styles/buttons/BDT_PlatinumCoin.css');
+@import url('./styles/buttons/BDT_GoldCoin.css');
+@import url('./styles/buttons/BDT_SilverCoin.css');
+@import url('./styles/buttons/BDT_CopperCoin.css');
+@import url('./styles/buttons/IW_GoodPoints.css');
+@import url('./styles/buttons/IW_EvilPoints.css');
+
+/* NOTE: Styles for eq-slider component */
+@import url('./styles/slider/SDT_DefSlider.css');
+
+html,
+input,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.ui {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+    background-color: transparent;
+    overflow: hidden;
+    margin: 0;
+    font-size: 1.2rem;
+    cursor: none; /* we mark places out of windows as none cursor */
+}
+
+.font-1 {
+    font-size: 1.3rem;
+}
+
+.font-2 {
+    font-size: 1.1rem;
+}

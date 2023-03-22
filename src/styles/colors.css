@@ -1,0 +1,61 @@
+html {
+    --c_crWhite: rgb(255, 255, 255);
+    --c_crBlack: rgb(0, 0, 0);
+    --c_crGray: rgb(192, 192, 192);
+    --c_crDkGray: rgb(128, 128, 128);
+    --c_crMediumGray: rgb(159, 159, 159);
+    --c_crVDkGray: rgb(64, 64, 64);
+    --c_crLightBlack: rgb(40, 40, 40);
+    --c_crRed: rgb(255, 0, 0);
+    --c_crGreen: rgb(0, 255, 0);
+    --c_crAquaDull: rgb(64, 192, 192);
+    --c_crRedDull: rgb(192, 128, 128);
+    --c_crRedBright: rgb(255, 80, 80);
+    --c_crGreenDull: rgb(128, 192, 128);
+    --c_crBlueDull: rgb(128, 128, 192);
+    --c_crYellowDull: rgb(192, 192, 64);
+    --c_crCrimsonDull: rgb(192, 64, 128);
+    --c_crBlue: rgb(0, 0, 255);
+    --c_crYellow: rgb(255, 255, 0);
+    --c_crOrange: rgb(255, 140, 0);
+    --c_crPurple: rgb(160, 32, 240);
+    --c_crGoldDull: rgb(214, 178, 40);
+    --c_crGoldDark: rgb(225, 181, 17);
+    --c_crBronze: rgb(255, 214, 51);
+    --c_crTan: rgb(215, 154, 66);
+    --c_crLightTan: rgb(255, 233, 129);
+    --c_crLtBlueCool: rgb(138, 163, 255);
+    --c_crLavender: rgb(230, 230, 250);
+    --c_crLemonChiffon: rgb(255, 250, 205);
+    --c_crMedBrown: rgb(73, 56, 32);
+    --CR_DIMMED: rgb(128, 128, 128);
+    --CR_DIMMEDBG: rgb(192, 0, 0);
+    --c_crMonGreenText: rgb(128, 255, 128);
+    --c_crMonSelect: var(--c_crWhite);
+    --c_crMonFlyBy: var(--c_crYellow);
+    --c_crMonSelectBG: var(--c_crRed);
+    --c_crChatInput: rgb(0, 255, 66);
+    --c_crOtherPlayerChat: rgb(196, 90, 0);
+    --c_crPlayerChat: rgb(133, 133, 133);
+
+    /* STML COLORREFs */
+    --c_crSTMLBlack: var(--c_crBlack);
+    --c_crSTMLSilver: var(--c_crGray);
+    --c_crSTMLGray: var(--c_crDkGray);
+    --c_crSTMLWhite: var(--c_crWhite);
+    --c_crSTMLMaroon: rgb(128, 0, 0);
+    --c_crSTMLRed: var(--c_crRed);
+    --c_crSTMLPurple: rgb(128, 0, 128);
+    --c_crSTMLFuchsia: rgb(255, 0, 255);
+    --c_crSTMLGreen: rgb(0, 128, 0);
+    --c_crSTMLLime: var(--c_crGreen);
+    --c_crSTMLOlive: rgb(128, 128, 0);
+    --c_crSTMLYellow: var(--c_crYellow);
+    --c_crSTMLNavy: rgb(0, 0, 128);
+    --c_crSTMLBlue: var(--c_crBlue);
+    --c_crSTMLTeal: rgb(0, 128, 128);
+    --c_crSTMLAqua: rgb(0, 255, 255);
+
+    /* Shared default colors */
+    --c_crDefaultBorder: var(--c_crWhite); /* Default tint for CTAFrameDraw borders */
+}

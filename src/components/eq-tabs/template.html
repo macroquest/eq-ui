@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="tabs-header">
+        <component-slot data-name="tab">
+            <eq-tab-heading slot="tab">First Tab</eq-tab-heading>
+            <eq-tab-heading slot="tab">Second Tab</eq-tab-heading>
+        </component-slot>
+    </div>
+    <component-slot data-name="panel">
+        <eq-tab-panel slot="panel">First Tab Content</eq-tab-panel>
+        <eq-tab-panel slot="panel">Second Tab Content</eq-tab-panel>
+    </component-slot>
+</div>

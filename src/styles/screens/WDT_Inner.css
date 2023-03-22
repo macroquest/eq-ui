@@ -1,0 +1,164 @@
+/* NOTE: WDT_Inner */
+.WDT_Inner {
+    --border-width: 0.2rem;
+    --z-index-borders: -1;
+    --z-index-panel: 1;
+
+    opacity: 1;
+    flex: 1 1;
+}
+
+.WDT_Inner > .container {
+    height: 100%;
+    position: relative;
+    padding-top: var(--border-width);
+    padding-left: var(--border-width);
+    padding-right: var(--border-width);
+    padding-bottom: var(--border-width);
+}
+
+.WDT_Inner > .container > .window-body {
+    flex: 1 1;
+    overflow: hidden;
+}
+
+.WDT_Inner > .container > .window-body > .background-color > .background {
+    background-image: url('../../../img/wnd_bg_light_rock.png');
+}
+
+.WDT_Inner .titlebar-left {
+    display: none;
+    width: 1.3rem;
+    height: 1.6rem;
+    background-image: url('../../../img/A_ChatWindowTitleLeft.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.WDT_Inner .titlebar-middle {
+    display: none;
+    text-align: center;
+    background-image: url('../../../img/A_WindowTitleMiddle.png');
+    background-size: 100%;
+    height: 1.6rem;
+    flex: 1 0;
+}
+
+.WDT_Inner .titlebar-right {
+    display: none;
+    width: 1.3rem;
+    height: 1.6rem;
+    background-image: url('../../../img/A_WindowTitleRight.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.WDT_Inner > .container > .window-frame-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0.2rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_InnerFrameBottomLeft.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-left-bottom {
+    position: absolute;
+    left: 0;
+    bottom: var(--border-width);
+    width: var(--border-width);
+    height: 0.2rem;
+    background-image: url('../../../img/A_InnerFrameLeft.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0.2rem;
+    height: var(--border-width);
+    background-image: url('../../../img/A_InnerFrameBottomRight.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-right-bottom {
+    position: absolute;
+    right: 0;
+    bottom: var(--border-width);
+    width: var(--border-width);
+    height: 0.2rem;
+    background-image: url('../../../img/A_InnerFrameRight.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-top-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--border-width);
+    height: 0.2rem;
+    background-image: url('../../../img/A_InnerFrameTopLeft.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-top-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: var(--border-width);
+    height: 0.2rem;
+    background-image: url('../../../img/A_InnerFrameTopRight.png');
+    background-size: 100%;
+    z-index: var(--z-index-panel);
+}
+
+.WDT_Inner > .container > .window-frame-top {
+    position: absolute;
+    top: 0;
+    left: var(--border-width);
+    height: var(--border-width);
+    width: 100%;
+    background-image: url('../../../img/A_InnerFrameTop.png');
+    background-size: 100%;
+    z-index: var(--z-index-borders);
+}
+
+.WDT_Inner > .container > .window-frame-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-image: url('../../../img/A_InnerFrameRight.png');
+    background-size: 100%;
+    width: var(--border-width);
+    z-index: var(--z-index-borders);
+}
+
+.WDT_Inner > .container > .window-frame-bottom {
+    position: absolute;
+    bottom: 0;
+    left: var(--border-width);
+    height: var(--border-width);
+    background-image: url('../../../img/A_InnerFrameBottom.png');
+    background-size: 100%;
+    width: 100%;
+    z-index: var(--z-index-borders);
+}
+
+.WDT_Inner > .container > .window-frame-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-image: url('../../../img/A_InnerFrameLeft.png');
+    background-size: 100%;
+    width: var(--border-width);
+    z-index: var(--z-index-borders);
+}

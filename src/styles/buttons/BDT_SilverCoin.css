@@ -1,0 +1,20 @@
+.BDT_SilverCoin {
+    position: relative;
+    color: var(--c_crWhite);
+    font-size: 1.3rem;
+}
+
+.BDT_SilverCoin .decal {
+    position: absolute;
+    left: 0.1rem;
+    top: 0.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background-image: url('../../../img/A_SilverCoin.png');
+    background-size: 100%;
+}
+
+.BDT_SilverCoin .background {
+    background-image: url('../../../img/A_RecessedBox.png');
+    background-size: 100%;
+}

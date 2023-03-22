@@ -1,0 +1,17 @@
+eq-input {
+    height: 2.0rem;
+    flex: 1 1;
+}
+
+eq-input input {
+    border: none;
+    background: transparent;
+    color: var(--c_crWhite);
+    display: flex;
+    flex: 1 1;
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}

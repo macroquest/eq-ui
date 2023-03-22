@@ -1,0 +1,78 @@
+eq-tabs > .container {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    color: var(--c_crWhite);
+}
+
+eq-tabs > .container > .tabs-header {
+    display: flex;
+    flex-direction: row;
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+    margin-bottom: -0.8rem;
+}
+
+eq-tabs eq-tab-heading {
+    cursor: pointer;
+    flex: 1 1;
+    justify-content: center;
+    padding-top: 0.2rem;
+}
+
+eq-tabs eq-tab-heading.active-tab {
+    padding-top: 0;
+}
+
+eq-tabs .active-tab {
+    color: var(--c_crYellow);
+    z-index: 1;
+}
+
+eq-tabs .active-panel {
+    display: block;
+}
+
+eq-tabs eq-tab-panel {
+    display: none;
+    flex: 1 1;
+}
+
+eq-tabs {
+    display: flex;
+    flex: 1 1;
+}
+
+eq-tab-panel > .container {
+    flex: 1 1 auto;
+}
+
+eq-tab-heading > .container > .window-body,
+eq-tab-panel > .container > .window-body {
+    position: relative;
+}
+
+eq-tab-heading > .container > .window-body > .background,
+eq-tab-panel > .container > .window-body > .background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+eq-tab-panel div[slot="panel-body"] {
+    flex: 1 1;
+    padding-top: 0.4rem;
+    padding-bottom: 0.5rem;
+}
+
+eq-tab-heading div[slot="heading-body"] {
+    text-align: center;
+}
+
+eq-tabs .active-tab div[slot="heading-body"] {
+    padding-bottom: 0.5rem;
+    padding-top: 0.1rem;
+}

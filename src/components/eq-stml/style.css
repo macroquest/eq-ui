@@ -1,0 +1,20 @@
+eq-stml {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    flex: 0 1;
+    padding: 0;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    color: var(--c_crWhite);
+}
+
+eq-stml .br {
+    width: 100%;
+}
+
+eq-stml .brbr {
+    height: 1.7rem;
+    width: 100%;
+}

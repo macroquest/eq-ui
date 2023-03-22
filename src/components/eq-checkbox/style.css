@@ -1,0 +1,43 @@
+eq-checkbox .container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+eq-checkbox .checkbox {
+    display: flex;
+    background-image: url('../../../img/A_CheckBoxNormal.png');
+    background-size: 100%;
+    width: 1.6rem;
+    height: 1.6rem;
+    align-self: center;
+}
+
+eq-checkbox[state-disabled] .checkbox {
+    background-image: url('../../../img/A_CheckBoxNormalDisabled.png');
+    background-size: 100%;
+}
+
+eq-checkbox[state-checked] .checkbox {
+    background-image: url('../../../img/A_CheckBoxPressed.png');
+    background-size: 100%;
+}
+
+eq-checkbox[state-checked][state-disabled] .checkbox {
+    background-image: url('../../../img/A_CheckBoxPressedDisabled.png');
+    background-size: 100%;
+}
+
+eq-checkbox .label {
+    margin-left: 0.4rem;
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: var(--c_crWhite);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.c-yellow {
+    color: var(--c_crYellow) !important;
+}

@@ -1,0 +1,32 @@
+export const config = {
+    ComboBox: {
+        AutoStretchList: false,
+        Style_VScroll: false,
+        Style_HScroll: false,
+        Style_AutoVScroll: false,
+        Style_AutoHScroll: false,
+        Style_Transparent: false,
+        Style_TransparentControl: false,
+        Style_Border: false,
+        Style_Tooltip: true,
+        Font: 3,
+        RelativePosition: true,
+        AutoStretch: false,
+        AutoStretchVertical: false,
+        AutoStretchHorizontal: false,
+        TopAnchorToTop: true,
+        LeftAnchorToLeft: true,
+        BottomAnchorToTop: true,
+        RightAnchorToLeft: true,
+        TopAnchorOffset: 0,
+        BottomAnchorOffset: 0,
+        LeftAnchorOffset: 0,
+        RightAnchorOffset: 0,
+        MinVSize: 0,
+        MinHSize: 0,
+        MaxVSize: 0,
+        MaxHSize: 0,
+        UseInLayoutHorizontal: 0,
+        UseInLayoutVertical: 0
+    }
+};

@@ -1,0 +1,6 @@
+eq-separator {
+    height: 0.4rem;
+    background-image: url('../../../img/A_CascadeMenuSeparator.png');
+    background-size: 100%;
+    background-position: center;
+}

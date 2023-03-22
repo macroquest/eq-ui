@@ -1,0 +1,14 @@
+eq-label {
+    color: var(--c_crWhite);
+    flex: 0 1;
+    padding-left: 0.1rem;
+}
+
+eq-label[no-wrap] > .text {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+eq-label[align-right] > .text {
+    text-align: right;
+}

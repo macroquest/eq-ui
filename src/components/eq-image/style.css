@@ -1,0 +1,37 @@
+eq-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+eq-image > .container .item-inside {
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+eq-image > .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+eq-image > .container .background {
+    filter: brightness(0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+eq-image:hover > .container .background {
+    filter: brightness(1);
+}
+

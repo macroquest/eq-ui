@@ -1,0 +1,41 @@
+.SDT_DefSlider .track {
+    background-image: url('../../../img/A_SliderBackground.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider .end-cap-left {
+    background-image: url('../../../img/A_SliderEndCapLeft.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider .end-cap-right {
+    background-image: url('../../../img/A_SliderEndCapRight.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider .thumb {
+    background-image: url('../../../img/A_SliderThumbNormal.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider[disabled] .thumb {
+    background-image: url('../../../img/A_SliderThumbDisabled.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider .thumb:hover,
+.SDT_DefSlider .thumb.hovered {
+    background-image: url('../../../img/A_SliderThumbFlyby.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider.pressed .thumb {
+    background-image: url('../../../img/A_SliderThumbPressed.png');
+    background-size: 100%;
+}
+
+.SDT_DefSlider.pressed .thumb:hover,
+.SDT_DefSlider.pressed .thumb.hovered {
+    background-image: url('../../../img/A_SliderThumbPressedFlyby.png');
+    background-size: 100%;
+}
