@@ -50,6 +50,8 @@ export const AttrChargesEvolving = 'ChargesEvolving';
 export const AttrColor = 'Color';
 export const AttrCooldownValue = 'CooldownValue'; // 0..1, '' means cooldown is disabled
 export const AttrCooldownColor = 'CooldownColor';
+export const AttrPowerBarValue = 'PowerBarValue';
+export const AttrPowerBarColor = 'PowerBarColor';
 
 export const AttrColumnsWidths = 'ColumnsWidths';
 export const AttrChoices = 'Choices';

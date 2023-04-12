@@ -3,7 +3,7 @@ import template from './template.html';
 import { BaseComponent, BindThis, Html } from '../base-component';
 import { EQ } from '../../eqengine';
 import { EventSelItem } from '../../eqevents';
-import { AttrEnabled, AttrChecked } from '../../eqconst';
+import { AttrEnabled, AttrChecked, AttrVisible } from '../../eqconst';
 import { tooltip, TOOLTIP_CONTENT_ATTRIBUTE } from '../eq-tooltip';
 enum EqCheckboxAttributes {
     Item = 'item',
@@ -20,6 +20,7 @@ class EqCheckbox extends BaseComponent {
     private box: HTMLDivElement | null = null;
     private labelContainer: HTMLElement | null = null;
     private keyPath: string;
+    visible: boolean;
 
     constructor() {
         super();
@@ -27,6 +28,7 @@ class EqCheckbox extends BaseComponent {
 
         this.checked = '1';
         this.enabled = '1';
+        this.visible = true;
     }
 
     get label(): string {
@@ -35,6 +37,10 @@ class EqCheckbox extends BaseComponent {
 
     get tooltipContent(): string | null {
         return this.getAttribute(EqCheckboxAttributes.TooltipContent);
+    }
+
+    get keyVisible() {
+        return `${this.keyPath}.${AttrVisible}`;
     }
 
     private get item(): string {
@@ -114,6 +120,25 @@ class EqCheckbox extends BaseComponent {
             this.labelContainer?.classList.add('c-yellow');
         } else {
             this.labelContainer?.classList.remove('c-yellow');
+        }
+        
+        const isVisible = EQ.getValue(this.keyVisible);
+        if (isVisible !== null) {
+            if (isVisible === '0') {
+                if (this.visible) {
+                    this.visible = false;
+                    // NOTE: we use filter here, because BaseComponent sets opacity=1 at third frame
+                    this.style.filter = 'opacity(0)';
+                    this.style.pointerEvents = 'none';
+                }
+                return;
+            } else {
+                if (!this.visible) {
+                    this.visible = true;
+                    this.style.filter = 'opacity(1)';
+                    this.style.pointerEvents = '';
+                }
+            }
         }
     }
 

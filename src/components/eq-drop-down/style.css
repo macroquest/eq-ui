@@ -59,7 +59,7 @@ eq-select .eq-select-options-container {
     display: none;
     background-size: cover;
     position: absolute;
-    z-index: 15;
+    z-index: 2;
 }
 
 eq-select .option {

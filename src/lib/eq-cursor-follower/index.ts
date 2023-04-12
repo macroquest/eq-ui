@@ -80,7 +80,7 @@ class CursorFollower {
 
     updated() {
         const enabled = EQ.getValue(this.keyEnabled) === '1';
-        if (enabled !== this.enabled || enabled == '1' ) {
+        if ( enabled || enabled !== this.enabled ) {
             this.enabled = enabled;
             // Note: The implementation assumes that image, background and quantity
             // are set in the same frame with Enabled and don't changes

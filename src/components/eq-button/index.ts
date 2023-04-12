@@ -5,7 +5,7 @@ import { cohColorMatrix, px } from '../helpers/helpers';
 import { tooltip, TOOLTIP_CONTENT_ATTRIBUTE } from '../eq-tooltip';
 import { EventSelItem } from '../../eqevents';
 import { EQ } from '../../eqengine';
-import { AttrEnabled, AttrText, ListSeparator } from '../../eqconst';
+import { AttrEnabled, AttrText, ListSeparator, AttrVisible } from '../../eqconst';
 
 type EqButtonState = {
     isPressed: boolean;
@@ -32,11 +32,13 @@ class EqButton extends BaseComponent {
     private keyPath = '';
     private background!: HTMLDivElement;
     private textElement!: HTMLDivElement;
+    visible: boolean;
 
     constructor() {
         super();
 
         this.keyPath = `${this.dispatch}.${this.item}`;
+        this.visible = true;
     }
 
     get dispatch() {
@@ -85,6 +87,10 @@ class EqButton extends BaseComponent {
 
     private get isPressed() {
         return this.state.isPressed;
+    }
+    
+    get keyVisible() {
+        return `${this.keyPath}.${AttrVisible}`;
     }
 
     private set isPressed(value: boolean) {
@@ -151,6 +157,25 @@ class EqButton extends BaseComponent {
         const enabled = EQ.getValue(this.keyEnabled);
 
         this.isDisabled = enabled === '0' || enabled === 'false' ? true : false;
+
+        const isVisible = EQ.getValue(this.keyVisible);
+        if (isVisible !== null) {
+            if (isVisible === '0') {
+                if (this.visible) {
+                    this.visible = false;
+                    // NOTE: we use filter here, because BaseComponent sets opacity=1 at third frame
+                    this.style.filter = 'opacity(0)';
+                    this.style.pointerEvents = 'none';
+                }
+                return;
+            } else {
+                if (!this.visible) {
+                    this.visible = true;
+                    this.style.filter = 'opacity(1)';
+                    this.style.pointerEvents = '';
+                }
+            }
+        }
     }
 
     bindCpp(): void {

@@ -7,7 +7,7 @@ import { px } from '../helpers/helpers';
 import '../eq-box';
 import { tooltip, TOOLTIP_CONTENT_ATTRIBUTE } from '../eq-tooltip';
 import { config } from '../../components-config';
-import { AttrChoices, AttrSelected } from '../../eqconst';
+import { AttrChoices, AttrSelected, AttrVisible } from '../../eqconst';
 
 enum EqDropDownAttributes {
     Choices = 'choices',
@@ -33,6 +33,7 @@ class EqDropDown extends BaseComponent {
     private hasBeenConnected: boolean;
     private defaultConfig = config.ComboBox;
     private keyPath: string;
+    visible: boolean;
 
     private state: EqDropDownState = { _isExpanded: false, _selectedIndex: 0, _selectedOptions: [], _options: [] };
 
@@ -42,6 +43,7 @@ class EqDropDown extends BaseComponent {
         this.hasBeenConnected = false;
 
         this.keyPath = `${this.dispatch}.${this.item}`;
+        this.visible = true;
     }
 
     private get dispatch(): string {
@@ -120,6 +122,10 @@ class EqDropDown extends BaseComponent {
         tooltip.updateContent();
 
         this.state._isExpanded = isExpanded;
+    }
+
+    get keyVisible() {
+        return `${this.keyPath}.${AttrVisible}`;
     }
 
     @BindThis
@@ -276,6 +282,24 @@ class EqDropDown extends BaseComponent {
             this.updateOptions();
             this.resetSelectedOption();
             this.insertValuePlaceholder();
+        }
+        const isVisible = EQ.getValue(this.keyVisible);
+        if (isVisible !== null) {
+            if (isVisible === '0') {
+                if (this.visible) {
+                    this.visible = false;
+                    // NOTE: we use filter here, because BaseComponent sets opacity=1 at third frame
+                    this.style.filter = 'opacity(0)';
+                    this.style.pointerEvents = 'none';
+                }
+                return;
+            } else {
+                if (!this.visible) {
+                    this.visible = true;
+                    this.style.filter = 'opacity(1)';
+                    this.style.pointerEvents = '';
+                }
+            }
         }
     }
 

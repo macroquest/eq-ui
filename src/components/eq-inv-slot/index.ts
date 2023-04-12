@@ -21,7 +21,10 @@ import {
     AttrEnabled,
     AttrTooltip,
     AttrCooldownValue,
-    AttrCooldownColor
+    AttrCooldownColor,
+    AttrBackgroundTintColor,
+    AttrPowerBarColor,
+    AttrPowerBarValue
 } from '../../eqconst';
 import { cursorFollower } from '../../lib/eq-cursor-follower';
 
@@ -30,6 +33,7 @@ type EqInvSlotState = {
     isLongPress: boolean;
     longPressTimeout: NodeJS.Timeout | null;
     enabled: boolean;
+    backgroundTintColor: string;
 };
 
 const LONG_PRESS_DELAY = 500;
@@ -49,10 +53,13 @@ class EqInvSlot extends BaseComponent {
         isEnabled: true,
         isLongPress: false,
         longPressTimeout: null,
-        enabled: true
+        enabled: true,
+        backgroundTintColor: ''
     };
     private itemInsideElement: HTMLDivElement | null = null;
     private cooldownElement!: HTMLDivElement;
+    private backColorElement!: HTMLDivElement;
+    private powerBarElement!: HTMLDivElement;
     private keyPath = '';
     private itemInsideUrl: string | null = null;
 
@@ -95,7 +102,15 @@ class EqInvSlot extends BaseComponent {
     get keyCooldownColor() {
         return `${this.keyPath}.${AttrCooldownColor}`;
     }
-
+    get keyBackgroundTintColor() {
+        return `${this.keyPath}.${AttrBackgroundTintColor}`;
+    }
+    get keyPowerBarValue() {
+        return `${this.keyPath}.${AttrPowerBarValue}`;
+    }
+    get keyPowerBarColor() {
+        return `${this.keyPath}.${AttrPowerBarColor}`;
+    }
     get width() {
         return this.getAttribute(EqInvSlotAttributes.Width);
     }
@@ -188,9 +203,12 @@ class EqInvSlot extends BaseComponent {
         EQ.bindValue(this.keyQuantity, '', this);
         EQ.bindValue(this.keyChargesEvolving, '', this);
         EQ.bindValue(this.keyTooltip, '', this);
+        EQ.bindValue(this.keyBackgroundTintColor, '', this, { notifyNow: true });
 
         EQ.bindValue(this.keyCooldownValue, '', this);
         EQ.bindValue(this.keyCooldownColor, '', this);
+        EQ.bindValue(this.keyPowerBarValue, '', this, { notifyNow: true });
+        EQ.bindValue(this.keyPowerBarColor, '', this, { notifyNow: true });
         this.updated();
     }
 
@@ -216,17 +234,20 @@ class EqInvSlot extends BaseComponent {
 
         const quantity = EQ.getValue(this.keyQuantity);
         if (quantity !== null) {
-            /** TODO: empty items are labeled red, else green */
-            //	if ( m_iQuantity == 0 ) textColor = c_crRed;
-            // else textColor = c_crGreen;
-            
             this.querySelector('.amount')!.innerHTML = quantity;
         }
-        
+
         const chargesEvolving = EQ.getValue(this.keyChargesEvolving);
-        if (chargesEvolving !== null)
-        {
-            this.querySelector('.chargesEvolving')!.innerHTML = chargesEvolving;
+        let evolving: HTMLElement = this.querySelector('.chargesEvolving')!
+        if (evolving) {
+            evolving.style.color = 'var(--c_crGreen)';
+            if (chargesEvolving !== null) {
+                if (chargesEvolving == '0') {
+                    evolving.style.color = 'var(--c_crRed)';
+                }
+                evolving.innerHTML = chargesEvolving;
+            }
+
         }
 
         const image = EQ.getValue(this.keyImage);
@@ -245,6 +266,7 @@ class EqInvSlot extends BaseComponent {
         }
 
         const cooldownValue = EQ.getValue(this.keyCooldownValue);
+        this.cooldownElement.style.height = '0';
         if (cooldownValue !== null) {
             //NOTE: 0..1, '' means cooldown is disabled
             if (cooldownValue !== '') {
@@ -253,9 +275,39 @@ class EqInvSlot extends BaseComponent {
                 if (cooldownColor) {
                     this.cooldownElement.style.backgroundColor = cooldownColor;
                 }
-            } else {
-                this.cooldownElement.style.height = '0';
             }
+        }
+
+        const backColorValue = EQ.getValue(this.keyBackgroundTintColor);
+        if (backColorValue !== null && backColorValue !== '' && backColorValue != '#c0c0c0ff') {
+            this.backColorElement.style.backgroundColor = backColorValue;
+            this.backColorElement.style.opacity = '0.15';
+        }
+        else
+        {
+            this.backColorElement.style.backgroundColor = '';
+            this.backColorElement.style.opacity = '0';
+        }
+
+        const powerBarValue = EQ.getValue(this.keyPowerBarValue);
+        const powerBarColor = EQ.getValue(this.keyPowerBarColor);
+        if (powerBarValue !== null && powerBarValue !== '' && powerBarColor != null ) {
+            let percentage = Number(powerBarValue) * 100;
+            if ( percentage < 10 )
+            {
+                percentage = 10;
+            }
+            this.powerBarElement.style.height = `${Number(percentage)}%`;
+            this.powerBarElement.style.width = '10%';
+            this.powerBarElement.style.backgroundColor = powerBarColor;
+            this.powerBarElement.style.opacity = '1';
+        }
+        else
+        {
+            this.powerBarElement.style.height = '0';
+            this.powerBarElement.style.width = '0';
+            this.powerBarElement.style.backgroundColor = '';
+            this.powerBarElement.style.opacity = '0';
         }
     }
 
@@ -264,6 +316,8 @@ class EqInvSlot extends BaseComponent {
             .then(() => {
                 this.itemInsideElement = this.querySelector('.item-inside');
                 this.cooldownElement = this.querySelector('.cooldown')!;
+                this.backColorElement = this.querySelector('.backColor')!;
+                this.powerBarElement = this.querySelector('.powerBar')!;
 
                 this.style.width = px(Number(this.width));
                 this.style.height = px(Number(this.height));

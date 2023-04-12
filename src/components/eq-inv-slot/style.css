@@ -60,7 +60,6 @@ eq-inv-slot > .container .chargesEvolving {
     left: 0;
     font-size: 1.0rem;
     line-height: 1.1rem;
-    color: var(--c_crGreen);
     background-color: var(--c_crVDkGray);
     text-align: center;
     z-index: 2;
@@ -72,6 +71,21 @@ eq-inv-slot > .container .cooldown {
     right: 0;
     left: 0;
     z-index: 3;
+}
+
+eq-inv-slot > .container .backColor {
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+eq-inv-slot > .container .powerBar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 10;
+    opacity: 0;
+    z-index: 0;
 }
 
 eq-inv-slot[item="InvSlot0"] > .container .background {
